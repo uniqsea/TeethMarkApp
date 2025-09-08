@@ -45,9 +45,13 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.57f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/UDPReceiver.cs" />
     <Compile Include="Assets/NamuFX/_SharedAssets/Scripts/Viewer.cs" />
+    <Compile Include="Assets/Scripts/TeethInputProcessor.cs" />
+    <Compile Include="Assets/Scripts/MagicEffectController.cs" />
     <Compile Include="Assets/Scripts/WizardController.cs" />
     <Compile Include="Assets/Scripts/HandSkills.cs" />
+    <Compile Include="Assets/Scripts/TeethController.cs" />
     <Compile Include="Assets/DragonEx_Free/Scripts/Scripts.cs" />
     <Compile Include="Assets/RedDragon 1.2/Assets/Scripts/DragonExample.cs" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMPro.cginc" />
