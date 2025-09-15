@@ -50,6 +50,12 @@ export class ContactService {
     return Math.abs(hash);
   }
 
+  // 基于任意标识（如手机号）生成稳定显示名
+  getNameForPhone(phone: string): string {
+    const key = (phone || '').replace(/\s+/g, '');
+    return this.generateNameForDevice(key || 'unknown');
+  }
+
   // 更新在线设备列表
   updateOnlineDevices(deviceIds: string[], currentDeviceId?: string): Contact[] {
     // 先将所有联系人设为离线

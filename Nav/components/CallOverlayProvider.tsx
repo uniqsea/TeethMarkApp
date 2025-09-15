@@ -2,6 +2,7 @@ import React, { createContext, useContext, useMemo, useState, ReactNode, useEffe
 import IncomingCallUI from './IncomingCallUI';
 import IncomingTwilioCallCard from './IncomingTwilioCallCard';
 import TwilioVoiceService from '../services/communication/TwilioVoiceService';
+import ContactService from '../services/core/ContactService';
 import DeviceIdManager from '../services/core/DeviceIdManager';
 import { getBackendUrl, getWebSocketUrl } from '../config/network';
 import ESP32GestureHandler, { ESP32HandlerState } from '../services/esp32/ESP32GestureHandler';
@@ -49,6 +50,7 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
   const [deviceId, setDeviceId] = useState<string>('');
   const [esp32State, setESP32State] = useState<ESP32HandlerState | null>(null);
   const twilioService = useRef<TwilioVoiceService | null>(null);
+  const contactService = useRef<ContactService | null>(null);
   const esp32Handler = useRef<ESP32GestureHandler | null>(null);
 
   // 初始化设备ID
@@ -221,6 +223,11 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
     
     const baseUrl = getBackendUrl();
 
+    // 初始化联系人服务（用于显示来电人名）
+    if (!contactService.current) {
+      contactService.current = new ContactService();
+    }
+
     twilioService.current = new TwilioVoiceService(baseUrl);
     twilioService.current.initialize(deviceId).then(() => {
       console.log('🔧 Global Twilio service initialized');
@@ -266,11 +273,10 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
   }, [deviceId]);
 
   // Twilio来电处理函数
+  // 接听逻辑已不再暴露到UI（如需保留可在此保留方法，不在UI使用）
   const handleTwilioAccept = () => {
     twilioService.current?.accept();
     setTwilioState({ visible: false, from: '' });
-    
-    // 通知ESP32来电已接听
     if (esp32Handler.current) {
       esp32Handler.current.setIncomingCallState(false);
       esp32Handler.current.sendSuccessFeedback('Call accepted');
@@ -341,8 +347,7 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
       {/* Twilio 来电UI */}
       <IncomingTwilioCallCard
         visible={twilioState.visible}
-        from={twilioState.from}
-        onAccept={handleTwilioAccept}
+        from={contactService.current ? contactService.current.getNameForPhone(twilioState.from) : twilioState.from}
         onReject={handleTwilioReject}
         onRejectWithBusy={handleTwilioRejectWithBusy}
         esp32Connected={esp32State?.bluetooth?.isConnected || false}

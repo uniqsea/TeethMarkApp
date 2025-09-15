@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
-    <DefineConstants>UNITY_2022_3_57;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2022_3_57;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS;READY_PLAYER_ME;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -45,42 +45,86 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.57f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/UDPReceiver.cs" />
+    <Compile Include="Assets/FullOpaqueSpell/Script/VFX_SpellManager.cs" />
+    <Compile Include="Assets/_Creepy_Cat/_3D Scifi Kit Starter Kit_HD/_Scripts/Turn_Move.cs" />
+    <Compile Include="Assets/Scripts/social/NpcWave.cs" />
     <Compile Include="Assets/NamuFX/_SharedAssets/Scripts/Viewer.cs" />
-    <Compile Include="Assets/Scripts/TeethInputProcessor.cs" />
-    <Compile Include="Assets/Scripts/MagicEffectController.cs" />
-    <Compile Include="Assets/Scripts/WizardController.cs" />
-    <Compile Include="Assets/Scripts/HandSkills.cs" />
-    <Compile Include="Assets/Scripts/TeethController.cs" />
-    <Compile Include="Assets/DragonEx_Free/Scripts/Scripts.cs" />
+    <Compile Include="Assets/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualTouchZone.cs" />
+    <Compile Include="Assets/Scripts/social/VRAvatarAligner.cs" />
+    <Compile Include="Assets/FullOpaqueSpell/Script/VFX_CameraShake.cs" />
+    <Compile Include="Assets/FullOpaqueSpell/Script/VFX_ShieldManager.cs" />
+    <Compile Include="Assets/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualJoystick.cs" />
+    <Compile Include="Assets/StarterAssets/Mobile/Scripts/VirtualInput.cs" />
+    <Compile Include="Assets/StarterAssets/Mobile/Scripts/TouchscreenInput.cs" />
+    <Compile Include="Assets/StarterAssets/Mobile/Scripts/Utilities/MobileDisableAutoSwitchControls.cs" />
+    <Compile Include="Assets/Scripts/AvatarController.cs" />
+    <Compile Include="Assets/FullOpaqueSpell/Script/VFX_SpellData.cs" />
+    <Compile Include="Assets/Scripts/social/Billboard.cs" />
     <Compile Include="Assets/RedDragon 1.2/Assets/Scripts/DragonExample.cs" />
+    <Compile Include="Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs" />
+    <Compile Include="Assets/StarterAssets/TutorialInfo/Scripts/Readme.cs" />
+    <Compile Include="Assets/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualButton.cs" />
+    <Compile Include="Assets/Scripts/PlayerSpawnPoint.cs" />
+    <Compile Include="Assets/Kevin Iglesias/Human Animations/Scripts/SpineProxy.cs" />
+    <Compile Include="Assets/FullOpaqueSpell/Script/VFX_MainSpellManager.cs" />
+    <Compile Include="Assets/Scripts/social/VRAvatarIK.cs" />
+    <Compile Include="Assets/StarterAssets/Mobile/Scripts/CanvasInputs/UICanvasControllerInput.cs" />
+    <Compile Include="Assets/BubbleR/BlendMode.cs" />
+    <Compile Include="Assets/Scripts/LaserController.cs" />
+    <Compile Include="Assets/Scripts/HandSkills.cs" />
+    <Compile Include="Assets/Scripts/social/VRFullBodyIK.cs" />
+    <Compile Include="Assets/LightningBolt/LightningBoltScript.cs" />
+    <Compile Include="Assets/StarterAssets/ThirdPersonController/Scripts/BasicRigidBodyPush.cs" />
+    <Compile Include="Assets/Scripts/social/EmojiBubble.cs" />
+    <Compile Include="Assets/DragonEx_Free/Scripts/Scripts.cs" />
+    <Compile Include="Assets/StarterAssets/InputSystem/StarterAssetsInputs.cs" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMPro.cginc" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets/LoafbrrAssets/ModularBrickhouses/README.txt" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
     <None Include="Assets/Oculus/Avatar2/CoreAssets/BehaviorAssets/blendedAnimation.behavior/event_definitions.json" />
-    <None Include="Assets/Oculus/Avatar2/CoreAssets/BehaviorAssets/blendedTrackingAnchoredAnimation.behavior/event_definitions.json" />
+    <None Include="Assets/Vefects/Zap VFX URP/VFX/Zap/Shaders/SH_Vefects_Zap_URP.shader" />
     <None Include="Assets/WizardPolyArt/Shader/PolyArtMaskTint.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
-    <None Include="Assets/Oculus/Avatar2/CoreAssets/Oculus/doNotDelete.txt" />
+    <None Include="Assets/BubbleR/BubbleShader-Textured.shader" />
+    <None Include="Assets/BubbleR/BubbleR.cginc" />
+    <None Include="Assets/StarterAssets/Mobile/UI/ToucScreenInputStyle.uss" />
+    <None Include="Assets/BubbleR/Documentation/Instructions.txt" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets/_Creepy_Cat/_3D Scifi Kit Starter Kit_HD/_Shaders/GlassTypeB.shader" />
+    <None Include="Assets/_Creepy_Cat/Readme Help Sos Doc.txt" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/SDFFunctions.hlsl" />
+    <None Include="Assets/Vefects/Zap VFX URP/Demo/Scene/Shaders/SH_Vefects_Grid_01.shader" />
+    <None Include="Assets/LightningBolt/Readme.txt" />
+    <None Include="Assets/FullOpaqueSpell/Documentation/README.txt" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+    <None Include="Assets/Vefects/Zap VFX URP/_ Extra/Shaders/SH_Vefects_Extra_Billboard_01.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
+    <None Include="Assets/Oculus/Avatar2/CoreAssets/BehaviorAssets/blendedTrackingAnchoredAnimation.behavior/event_definitions.json" />
+    <None Include="Assets/_Creepy_Cat/_Docs/Doc.txt" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_SDF.shader" />
+    <None Include="Assets/StarterAssets/license.txt" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+    <None Include="Assets/FX_Kandol_Pack/FX_lightning_II/Shaders/built-in/Flipbook_Effects_built-in.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+    <None Include="Assets/Vefects/Zap VFX URP/Demo/Resources/Shaders/SH_Vefects_URP_VFX_Character_Showoff.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets/StarterAssets/Mobile/UI/TouchScreenInputUI.uxml" />
+    <None Include="Assets/Vefects/Zap VFX URP/_ Extra/Shaders/SH_Vefects_Extra_Grid_01.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
     <None Include="Assets/WizardPolyArt/SRP/HowToTestSRPs.txt" />
+    <None Include="Assets/Oculus/Avatar2/CoreAssets/Oculus/doNotDelete.txt" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+    <None Include="Assets/BubbleR/BubbleShader.shader" />
+    <None Include="Assets/Vefects/Zap VFX URP/VFX/Zap/Shaders/SH_Vefects_Extra_Particles_URP.shader" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Sprites/EmojiOne.json" />
     <None Include="Assets/DragonEx_Free/TextMesh Pro/Shaders/TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
@@ -323,6 +367,12 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.57f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/PackageCache/com.unity.services.wire@1.4.0/Plugins/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/PackageCache/com.unity.collections@2.2.1/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/PackageCache/com.unity.testtools.codecoverage@1.2.6/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
     </Reference>
@@ -331,6 +381,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/PackageCache/com.unity.nuget.mono-cecil@1.11.4/Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.57f1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
@@ -719,6 +772,9 @@
     <Reference Include="Meta.XR.Editor.Settings">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Editor.Settings.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
@@ -728,11 +784,23 @@
     <Reference Include="Meta.XR.Editor.Tags">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Editor.Tags.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Common.Path.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Common.Path.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Meta.XR.Editor.UserInterface">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Editor.UserInterface.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Networking.Transport">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Networking.Transport.dll</HintPath>
+    </Reference>
     <Reference Include="VoiceSDK.Telemetry.Runtime">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/VoiceSDK.Telemetry.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Aseprite.Common">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Aseprite.Common.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.OculusQuestSupport.Editor.dll</HintPath>
@@ -764,8 +832,14 @@
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.PixelPerfect">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="PPv2URPConverters">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
@@ -775,6 +849,9 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Aseprite.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Aseprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Interaction.OVR.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.Interaction.OVR.Editor.dll</HintPath>
@@ -809,17 +886,26 @@
     <Reference Include="Meta.WitAi">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.WitAi.dll</HintPath>
     </Reference>
-    <Reference Include="Meta.XR.Editor.UPST.Notifications">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Editor.UPST.Notifications.dll</HintPath>
+    <Reference Include="ReadyPlayerMe.Core">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/ReadyPlayerMe.Core.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.Audio.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Audio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Multiplayer">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Multiplayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.XR.Editor.UPST.Notifications">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Editor.UPST.Notifications.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.XR.MultiplayerBlocks.NGO">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.MultiplayerBlocks.NGO.dll</HintPath>
     </Reference>
     <Reference Include="Meta.WitAi.TTS.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.WitAi.TTS.Editor.dll</HintPath>
@@ -829,6 +915,9 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Runtime">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Interaction.OVR.Samples">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.Interaction.OVR.Samples.dll</HintPath>
@@ -856,6 +945,9 @@
     </Reference>
     <Reference Include="Meta.XR.Editor.ToolingSupport">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Editor.ToolingSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Components">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Core.Components.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.EnvironmentDepth.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.EnvironmentDepth.Editor.dll</HintPath>
@@ -893,17 +985,35 @@
     <Reference Include="Oculus.Interaction.Editor.UnityXR">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.Interaction.Editor.UnityXR.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Oculus.VR">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="AssistantCoreSDKRuntime">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/AssistantCoreSDKRuntime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.Management">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+    <Reference Include="Unity.Services.Multiplayer.Editor.Shared">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Multiplayer.Editor.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="glTFast.dots">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/glTFast.dots.dll</HintPath>
     </Reference>
     <Reference Include="Meta.VoiceSDK.Mic.Common">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.VoiceSDK.Mic.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Runtime">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.ImmersiveDebugger.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.ImmersiveDebugger.Editor.dll</HintPath>
@@ -911,14 +1021,20 @@
     <Reference Include="Meta.XR.EnvironmentDepth">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.EnvironmentDepth.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="AssistantVoiceCommandCommon">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/AssistantVoiceCommandCommon.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="glTFast.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/glTFast.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="ReadyPlayerMe.Core.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/ReadyPlayerMe.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.MultiplayerBlocks.Fusion.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.MultiplayerBlocks.Fusion.Editor.dll</HintPath>
@@ -929,23 +1045,35 @@
     <Reference Include="Oculus.Interaction.Samples.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.Interaction.Samples.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.PixelPerfect.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Meta.Voice.NLayer">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.Voice.NLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
-    <Reference Include="VoiceSDK.Dictation.Editor">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/VoiceSDK.Dictation.Editor.dll</HintPath>
+    <Reference Include="Unity.Netcode.Components">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Netcode.Components.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VoiceSDK.Dictation.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/VoiceSDK.Dictation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.Guides.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Guides.Editor.dll</HintPath>
@@ -953,8 +1081,20 @@
     <Reference Include="Unity.XR.CoreUtils">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.CoreUtils.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Meta.Wit.Dictation">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.Wit.Dictation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Netcode.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Netcode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Environments">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Multiplayer.Multiplay.Authoring.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Multiplayer.Multiplay.Authoring.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
@@ -962,29 +1102,50 @@
     <Reference Include="Unity.XR.Management.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Netcode.Runtime">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Netcode.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Runtime">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Netcode.Editor.PackageChecker">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Netcode.Editor.PackageChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Collections.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="AssistantVoiceCommandCommon.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/AssistantVoiceCommandCommon.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Interaction.InterfaceSupport">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.Interaction.InterfaceSupport.dll</HintPath>
     </Reference>
-    <Reference Include="Oculus.VR.Scripts.Editor">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.VR.Scripts.Editor.dll</HintPath>
+    <Reference Include="Unity.Services.Multiplayer.Editor.Matchmaker.Authoring">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Multiplayer.Editor.Matchmaker.Authoring.dll</HintPath>
     </Reference>
     <Reference Include="Oculus.Interaction.OVR">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.Interaction.OVR.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.CoreUtils.Editor">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.CoreUtils.Editor.dll</HintPath>
+    <Reference Include="Oculus.VR.Scripts.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.VR.Scripts.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Multiplayer.Multiplay.Authoring.Core">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Multiplayer.Multiplay.Authoring.Core.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.Editor.Id">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Editor.Id.dll</HintPath>
     </Reference>
-    <Reference Include="Meta.VoiceSDK.Mic.Other">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.VoiceSDK.Mic.Other.dll</HintPath>
+    <Reference Include="Unity.XR.CoreUtils.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.CoreUtils.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Analytics">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.VoiceSDK.Mic.Other">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.VoiceSDK.Mic.Other.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
@@ -1007,17 +1168,29 @@
     <Reference Include="Meta.WitAi.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.WitAi.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="ReadyPlayerMe.AvatarCreator.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/ReadyPlayerMe.AvatarCreator.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Oculus.Haptics">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.Haptics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="ReadyPlayerMe.AvatarCreator">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/ReadyPlayerMe.AvatarCreator.dll</HintPath>
+    </Reference>
+    <Reference Include="PsdPlugin">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+    </Reference>
     <Reference Include="VoiceSDK.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/VoiceSDK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Authentication.Editor.Shared">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Authentication.Editor.Shared.dll</HintPath>
     </Reference>
     <Reference Include="meta.xr.mrutilitykit">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/meta.xr.mrutilitykit.dll</HintPath>
@@ -1037,17 +1210,23 @@
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+    <Reference Include="Unity.2D.Tilemap.Extras">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    <Reference Include="Unity.Services.QoS">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.QoS.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.Editor.StatusMenu">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Editor.StatusMenu.dll</HintPath>
@@ -1055,8 +1234,14 @@
     <Reference Include="Meta.WitAi.Lib">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.WitAi.Lib.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    </Reference>
     <Reference Include="Meta.XR.MultiplayerBlocks.Shared">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.MultiplayerBlocks.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Runtime">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.MultiplayerBlocks.NGO.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.MultiplayerBlocks.NGO.Editor.dll</HintPath>
@@ -1094,14 +1279,26 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.AI.Navigation.Updater">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Meta.Net.endel.nativewebsocket">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.Net.endel.nativewebsocket.dll</HintPath>
     </Reference>
+    <Reference Include="glTFast">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/glTFast.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Authentication">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Authentication.dll</HintPath>
     </Reference>
     <Reference Include="Meta.XR.BuildingBlocks.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.BuildingBlocks.Editor.dll</HintPath>
@@ -1109,8 +1306,17 @@
     <Reference Include="Unity.Mathematics">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Oculus.Interaction.Samples">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.Interaction.Samples.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Authentication.PlayerAccounts">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Services.Authentication.PlayerAccounts.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Networking.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.Networking.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -1118,23 +1324,32 @@
     <Reference Include="Unity.AI.Navigation.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Oculus.AvatarSDK2">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.AvatarSDK2.dll</HintPath>
     </Reference>
     <Reference Include="VoiceSDK.Runtime.Composer">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/VoiceSDK.Runtime.Composer.dll</HintPath>
     </Reference>
+    <Reference Include="Meta.XR.Editor.TelemetryUI">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Editor.TelemetryUI.dll</HintPath>
+    </Reference>
     <Reference Include="Oculus.Haptics.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Oculus.Haptics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Meta.Wit.Dictation.Editor">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.Wit.Dictation.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Meta.XR.Editor.TelemetryUI">
-      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Meta.XR.Editor.TelemetryUI.dll</HintPath>
+    <Reference Include="Unity.2D.Animation.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor">
+      <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.dll</HintPath>
     </Reference>
     <Reference Include="VoiceSDK.Runtime">
       <HintPath>/Users/uniqsea/Workspace/TeethMarkApp/VRSocial/Library/ScriptAssemblies/VoiceSDK.Runtime.dll</HintPath>
@@ -1144,6 +1359,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ReadyPlayerMe.Samples.QuickStart.csproj">
+      <Project>{2c1b51ca-f931-a698-7171-c9c5c16db919}</Project>
+      <Name>ReadyPlayerMe.Samples.QuickStart</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

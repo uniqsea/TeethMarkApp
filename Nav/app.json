@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "VisionNav",
-    "slug": "visionnav",
+    "name": "TeethMarkNav",
+    "slug": "teethmarknav",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

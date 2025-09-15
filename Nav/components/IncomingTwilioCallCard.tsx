@@ -5,7 +5,6 @@ import { MaterialIcons, FontAwesome5 } from '@expo/vector-icons';
 interface Props {
   visible: boolean;
   from: string;
-  onAccept: () => void;
   onReject: () => void;
   onRejectWithBusy: () => void;
   esp32Connected?: boolean; // ESP32连接状态
@@ -15,7 +14,6 @@ interface Props {
 export default function IncomingTwilioCallCard({ 
   visible, 
   from, 
-  onAccept, 
   onReject, 
   onRejectWithBusy,
   esp32Connected = false,
@@ -30,7 +28,7 @@ export default function IncomingTwilioCallCard({
     switch (buttonIndex) {
       case 0: // 挂断
         return [...baseStyle, styles.reject, isSelected && styles.selectedButton];
-      case 1: // 接听
+      case 1: // 接听（已移除按钮，保留样式占位）
         return [...baseStyle, styles.accept, isSelected && styles.selectedButton];
       case 2: // 忙碌短信
         return [...baseStyle, styles.busy, isSelected && styles.selectedButton];
@@ -48,7 +46,7 @@ export default function IncomingTwilioCallCard({
           </View>
           <View style={styles.titleBox}>
             <Text style={styles.title}>Incoming Call</Text>
-            <Text style={styles.subTitle}>{from || 'Unknown Number'}</Text>
+            <Text style={styles.subTitle}>{from || 'Unknown'}</Text>
             {esp32Connected && (
               <Text style={styles.esp32Status}>🦷 Gesture Control Available</Text>
             )}
@@ -60,13 +58,10 @@ export default function IncomingTwilioCallCard({
             <FontAwesome5 name="phone-slash" size={20} color="#fff" />
             <Text style={styles.actionText}>Decline</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={getButtonStyle(1)} onPress={onAccept}>
-            <FontAwesome5 name="phone" size={20} color="#fff" />
-            <Text style={styles.actionText}>Accept</Text>
-          </TouchableOpacity>
+          {/* 接听按钮已移除 */}
           <TouchableOpacity style={getButtonStyle(2)} onPress={onRejectWithBusy}>
             <MaterialIcons name="message" size={20} color="#fff" />
-            <Text style={styles.actionText}>Busy SMS</Text>
+            <Text style={styles.actionText}>SMS</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -102,7 +97,7 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#14b8a6',
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 12,
@@ -137,7 +132,7 @@ const styles = StyleSheet.create({
   },
   accept: { backgroundColor: '#10b981' },
   reject: { backgroundColor: '#ef4444' },
-  busy: { backgroundColor: '#6366f1' },
+  busy: { backgroundColor: '#0ea5e9' },
   selectedButton: {
     borderWidth: 3,
     borderColor: '#fbbf24',

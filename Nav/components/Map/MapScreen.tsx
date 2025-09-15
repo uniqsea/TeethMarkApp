@@ -17,8 +17,8 @@ import DeviceIdManager from '../../services/core/DeviceIdManager';
 import IncomingCallUI from '../IncomingCallUI';
 import { useCallOverlay } from '../CallOverlayProvider';
 
-
-
+// Feature flag: disable WebRTC signaling on app start
+const WEBRTC_ENABLED = false;
 export function MapScreen() {
     const overlay = useCallOverlay();
     const mapRef = useRef<MapView>(null);
@@ -52,49 +52,54 @@ export function MapScreen() {
 
     useEffect(() => {
         fetchCurrentLocation();
-        
-        // 初始化 WebRTC 服务
-        webRTCService.current = new WebRTCService(deviceId);
-        
-        // 设置回调
-        webRTCService.current.onStateChange = (state) => {
-            setCallState(prev => ({ ...prev, ...state }));
-        };
-        
-        webRTCService.current.onIncomingCall = (callerId) => {
-            console.log('Incoming call from:', callerId);
-            setCallState(prev => ({ ...prev, incomingCall: true, callerId }));
-            // Show global overlay
-            overlay.showIncoming({
-                callerId,
-                onAccept: async () => {
-                    await webRTCService.current?.acceptCall();
-                    setCallState(prev => ({ ...prev, incomingCall: false, isInCall: true }));
-                },
-                onReject: () => {
-                    webRTCService.current?.rejectCall();
-                    setCallState(prev => ({ ...prev, incomingCall: false }));
-                },
-                onRejectWithMessage: () => {
-                    webRTCService.current?.rejectCallWithBusyMessage();
-                    setCallState(prev => ({ ...prev, incomingCall: false }));
-                }
-            });
-        };
-        
-        webRTCService.current.onCallEnd = () => {
-            console.log('Call ended');
-            setCallState(prev => ({ 
-                ...prev, 
-                incomingCall: false, 
-                isInCall: false,
-                callerId: undefined 
-            }));
-        };
 
-        return () => {
-            webRTCService.current?.destroy();
-        };
+        if (WEBRTC_ENABLED && deviceId) {
+            // 初始化 WebRTC 服务（受开关控制）
+            webRTCService.current = new WebRTCService(deviceId);
+
+            // 设置回调
+            webRTCService.current.onStateChange = (state) => {
+                setCallState(prev => ({ ...prev, ...state }));
+            };
+
+            webRTCService.current.onIncomingCall = (callerId) => {
+                console.log('Incoming call from:', callerId);
+                setCallState(prev => ({ ...prev, incomingCall: true, callerId }));
+                // Show global overlay
+                overlay.showIncoming({
+                    callerId,
+                    onAccept: async () => {
+                        await webRTCService.current?.acceptCall();
+                        setCallState(prev => ({ ...prev, incomingCall: false, isInCall: true }));
+                    },
+                    onReject: () => {
+                        webRTCService.current?.rejectCall();
+                        setCallState(prev => ({ ...prev, incomingCall: false }));
+                    },
+                    onRejectWithMessage: () => {
+                        webRTCService.current?.rejectCallWithBusyMessage();
+                        setCallState(prev => ({ ...prev, incomingCall: false }));
+                    }
+                });
+            };
+
+            webRTCService.current.onCallEnd = () => {
+                console.log('Call ended');
+                setCallState(prev => ({ 
+                    ...prev, 
+                    incomingCall: false, 
+                    isInCall: false,
+                    callerId: undefined 
+                }));
+            };
+
+            return () => {
+                webRTCService.current?.destroy();
+            };
+        }
+
+        // 未启用 WebRTC 时，无需清理
+        return () => {};
     }, [deviceId]);
     useEffect(() => {
         console.log('Destination updated:', destination);
