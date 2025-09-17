@@ -17,6 +17,8 @@ public class NpcWave : MonoBehaviour
         if (bubbleComp != null)
         {
             bubbleComp.SetTarget(player);
+            bubbleComp.SetSender(transform);
+            bubbleComp.SetSourcePrefab(emojiPrefab);
         }
     }
 }
