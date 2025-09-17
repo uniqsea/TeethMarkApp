@@ -255,14 +255,14 @@ export class ESP32GestureHandler extends EventEmitter {
     this.currentCallState = isActive;
     this.inputProcessor.setCallActive(isActive);
     
-    if (isActive && callerInfo) {
-      // 发送来电反馈
-      this.outputProcessor.sendCallFeedback('incoming');
-      // this.emit('incomingCallStarted', callerInfo); // 注释掉未定义的事件
-    } else {
-      // 发送来电结束反馈
-      this.outputProcessor.sendCallFeedback('ended');
-      // this.emit('incomingCallEnded'); // 注释掉未定义的事件
+    // ESP32 非必需：仅在已连接时才发送输出反馈，未连接时静默跳过
+    const canSend = this.transport.isDeviceConnected();
+    if (canSend) {
+      if (isActive && callerInfo) {
+        this.outputProcessor.sendCallFeedback('incoming');
+      } else {
+        this.outputProcessor.sendCallFeedback('ended');
+      }
     }
   }
 
@@ -270,36 +270,48 @@ export class ESP32GestureHandler extends EventEmitter {
 
   public async sendNavigationTurnFeedback(direction: 'left' | 'right'): Promise<boolean> {
     console.log('🧭 Sending navigation turn feedback:', direction);
-    this.outputProcessor.sendNavigationFeedback(`turn_${direction}` as any);
-    return true; // 异步队列处理，立即返回true
+    if (this.transport.isDeviceConnected()) {
+      this.outputProcessor.sendNavigationFeedback(`turn_${direction}` as any);
+    }
+    return true; // 未连接时静默忽略
   }
 
   public async sendNavigationArrivalFeedback(): Promise<boolean> {
     console.log('🏁 Sending navigation arrival feedback');
-    this.outputProcessor.sendNavigationFeedback('arrival');
+    if (this.transport.isDeviceConnected()) {
+      this.outputProcessor.sendNavigationFeedback('arrival');
+    }
     return true;
   }
 
   public async sendNavigationOffRouteFeedback(): Promise<boolean> {
     console.log('⚠️ Sending off-route feedback');
-    this.outputProcessor.sendNavigationFeedback('off_route');
+    if (this.transport.isDeviceConnected()) {
+      this.outputProcessor.sendNavigationFeedback('off_route');
+    }
     return true;
   }
 
   // === 通用反馈方法（保持API兼容） ===
 
   public async sendSuccessFeedback(message?: string): Promise<boolean> {
-    this.outputProcessor.sendNotificationFeedback('success', message);
+    if (this.transport.isDeviceConnected()) {
+      this.outputProcessor.sendNotificationFeedback('success', message);
+    }
     return true;
   }
 
   public async sendErrorFeedback(message?: string): Promise<boolean> {
-    this.outputProcessor.sendNotificationFeedback('error', message);
+    if (this.transport.isDeviceConnected()) {
+      this.outputProcessor.sendNotificationFeedback('error', message);
+    }
     return true;
   }
 
   public async sendWarningFeedback(message?: string): Promise<boolean> {
-    this.outputProcessor.sendNotificationFeedback('warning', message);
+    if (this.transport.isDeviceConnected()) {
+      this.outputProcessor.sendNotificationFeedback('warning', message);
+    }
     return true;
   }
 
@@ -307,7 +319,9 @@ export class ESP32GestureHandler extends EventEmitter {
 
   public async sendTestFeedback(): Promise<boolean> {
     console.log('🧪 Sending test feedback to ESP32');
-    this.outputProcessor.sendTestFeedback();
+    if (this.transport.isDeviceConnected()) {
+      this.outputProcessor.sendTestFeedback();
+    }
     return true;
   }
 
@@ -315,7 +329,9 @@ export class ESP32GestureHandler extends EventEmitter {
 
   public async sendOutputMode(mode: string, info: string = 'set_output_mode'): Promise<boolean> {
     console.log(`🔧 Setting output mode: ${mode}`);
-    this.outputProcessor.setOutputMode(mode as any);
+    if (this.transport.isDeviceConnected()) {
+      this.outputProcessor.setOutputMode(mode as any);
+    }
     return true;
   }
 

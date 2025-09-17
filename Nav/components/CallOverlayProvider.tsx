@@ -4,7 +4,9 @@ import IncomingTwilioCallCard from './IncomingTwilioCallCard';
 import TwilioVoiceService from '../services/communication/TwilioVoiceService';
 import ContactService from '../services/core/ContactService';
 import DeviceIdManager from '../services/core/DeviceIdManager';
-import { getBackendUrl, getWebSocketUrl } from '../config/network';
+import { getBackendUrl, getWebSocketUrl, getStudySseUrl } from '../config/network';
+import { Platform, View, Text } from 'react-native';
+import RNEventSource from 'react-native-sse';
 import ESP32GestureHandler, { ESP32HandlerState } from '../services/esp32/ESP32GestureHandler';
 import { TwilioCallButton } from '../services/esp32/ESP32InputProcessor';
 
@@ -49,6 +51,7 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
   const [twilioState, setTwilioState] = useState<TwilioOverlayState>({ visible: false, from: '' });
   const [deviceId, setDeviceId] = useState<string>('');
   const [esp32State, setESP32State] = useState<ESP32HandlerState | null>(null);
+  const [twilioCardStatus, setTwilioCardStatus] = useState<'idle' | 'sending' | 'sent' | 'failed'>('idle');
   const twilioService = useRef<TwilioVoiceService | null>(null);
   const contactService = useRef<ContactService | null>(null);
   const esp32Handler = useRef<ESP32GestureHandler | null>(null);
@@ -58,13 +61,8 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
     DeviceIdManager.getInstance().getDeviceId().then(setDeviceId);
   }, []);
 
-  // 初始化WebSocket连接用于接收模拟来电 (仅Web)
+  // 初始化 WebSocket 连接用于接收模拟来电（同时支持 Web 与 React Native）
   useEffect(() => {
-    if (typeof window === 'undefined') {
-      console.log('📱 Skipping WebSocket on React Native - use HTTP polling instead');
-      return;
-    }
-
     const wsUrl = getWebSocketUrl();
     console.log('🔌 Connecting to WebSocket:', wsUrl);
     
@@ -190,6 +188,48 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
+  // 订阅 Study2 手势 SSE：slide_left -> 拒接；slide_right -> 忙碌短信
+  useEffect(() => {
+    const sseUrl = getStudySseUrl();
+    let es: any = null;
+
+    try {
+      if (Platform.OS === 'web') {
+        es = new EventSource(sseUrl, { withCredentials: false } as any);
+      } else {
+        es = new RNEventSource(sseUrl, { headers: {} });
+      }
+    } catch (e) {
+      console.error('Failed to init EventSource:', e);
+      return;
+    }
+
+    const handleMessage = (dataObj: any) => {
+      try {
+        if (dataObj && dataObj.event === 'input' && typeof dataObj.gesture === 'string') {
+          const gesture = String(dataObj.gesture).toLowerCase().replace(/\s+/g, '_');
+          if (!twilioState.visible) return;
+          if (gesture === 'slide_left') handleTwilioReject();
+          else if (gesture === 'slide_right') handleTwilioRejectWithBusy();
+        }
+      } catch {}
+    };
+
+    if (Platform.OS === 'web') {
+      es.onmessage = (ev: MessageEvent) => {
+        try { handleMessage(JSON.parse((ev as any).data || '{}')); } catch {}
+      };
+      es.onerror = () => { try { es && es.close(); } catch {} };
+    } else {
+      es.addEventListener('message', (ev: any) => {
+        try { handleMessage(JSON.parse(ev?.data || '{}')); } catch {}
+      });
+      es.addEventListener('error', () => { try { es && es.close(); } catch {} });
+    }
+
+    return () => { try { es && es.close(); } catch {} };
+  }, [twilioState.visible]);
+
   // 更新ESP32状态
   const updateESP32State = () => {
     if (esp32Handler.current) {
@@ -237,6 +277,7 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
     twilioService.current.on('incoming', ({ from }) => {
       console.log('📞 Global incoming Twilio call from:', from);
       setTwilioState({ visible: true, from });
+      setTwilioCardStatus('idle');
       
       // 通知ESP32来电状态
       if (esp32Handler.current) {
@@ -246,6 +287,7 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
 
     twilioService.current.on('disconnected', () => {
       setTwilioState({ visible: false, from: '' });
+      setTwilioCardStatus('idle');
     });
 
     // 添加全局测试函数
@@ -297,6 +339,7 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
   const handleTwilioRejectWithBusy = async () => {
     try {
       const baseUrl = getBackendUrl();
+      setTwilioCardStatus('sending');
       
       await fetch(`${baseUrl}/twilio/sms/busy`, {
         method: 'POST',
@@ -308,17 +351,30 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
       });
       
       console.log('📱 Busy SMS sent to:', twilioState.from);
+      setTwilioCardStatus('sent');
+      // 短暂展示“SMS sent”，随后挂断并关闭卡片
+      setTimeout(() => {
+        twilioService.current?.reject();
+        setTwilioState({ visible: false, from: '' });
+        if (esp32Handler.current) {
+          esp32Handler.current.setIncomingCallState(false);
+          esp32Handler.current.sendSuccessFeedback('Busy SMS sent');
+        }
+        setTwilioCardStatus('idle');
+      }, 1000);
     } catch (error) {
       console.error('Failed to send busy SMS:', error);
-    }
-    
-    twilioService.current?.reject();
-    setTwilioState({ visible: false, from: '' });
-    
-    // 通知ESP32来电已挂断并发送忙碌短信
-    if (esp32Handler.current) {
-      esp32Handler.current.setIncomingCallState(false);
-      esp32Handler.current.sendSuccessFeedback('Busy SMS sent');
+      setTwilioCardStatus('failed');
+      // 失败也结束来电，短暂提示
+      setTimeout(() => {
+        twilioService.current?.reject();
+        setTwilioState({ visible: false, from: '' });
+        if (esp32Handler.current) {
+          esp32Handler.current.setIncomingCallState(false);
+          esp32Handler.current.sendErrorFeedback('Busy SMS failed');
+        }
+        setTwilioCardStatus('idle');
+      }, 1200);
     }
   };
 
@@ -352,6 +408,7 @@ export function CallOverlayProvider({ children }: { children: ReactNode }) {
         onRejectWithBusy={handleTwilioRejectWithBusy}
         esp32Connected={esp32State?.bluetooth?.isConnected || false}
         selectedButton={esp32State?.gestureControl?.selectedButton || null}
+        status={twilioCardStatus}
       />
     </CallOverlayContext.Provider>
   );

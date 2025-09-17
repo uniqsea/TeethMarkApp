@@ -11,6 +11,7 @@ import HomeScreenBottom from './HomeScreenBottom';
 import NavigationCard from './NavigationCard'; // 引入新的导航卡片组件
 
 import { env } from '../../config';
+import { getStudyApiUrl } from '../../config/network';
 import { getDistance } from 'geolib';
 import WebRTCService, { CallState } from '../../services/communication/WebRTCService';
 import DeviceIdManager from '../../services/core/DeviceIdManager';
@@ -237,29 +238,53 @@ export function MapScreen() {
         updateRegion(coords.latitude, coords.longitude);
     };
 
-    const sendNavigationFeedback = async (direction: 'left' | 'right' | 'arrival' | 'off_route') => {
+    const sendNavigationFeedback = async (direction: 'left' | 'right' | 'straight' | 'arrival') => {
         try {
-            if (overlay.esp32Handler) {
-                console.log('🧭 Sending ESP32 navigation feedback:', direction);
-                const success = await overlay.esp32Handler.sendNavigationTurnFeedback(
-                    direction === 'arrival' ? 'left' : direction as 'left' | 'right'
-                );
-                
-                if (direction === 'arrival') {
-                    // For arrival, send both left and right feedback with arrival pattern
-                    await overlay.esp32Handler.sendNavigationArrivalFeedback();
-                }
-                
-                if (success) {
-                    console.log('✅ ESP32 navigation feedback sent successfully');
-                } else {
-                    console.warn('🟡 ESP32 navigation feedback failed');
-                }
-            } else {
-                console.warn('🟡 ESP32 handler not available for navigation feedback');
+            const base = getStudyApiUrl();
+            const post = async (path: string, body?: any) => {
+                return fetch(`${base}${path}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: body ? JSON.stringify(body) : undefined,
+                });
+            };
+            const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
+            if (direction === 'left') {
+                // 左转 -> /stimulus flow 左flow，执行3次
+                const payload = {
+                    event: 'stimulus',
+                    mode: ['tongue'],
+                    pattern: { type: 'flow', name: 'D-A' }, // 左向：D->A
+                };
+                await post('/stimulus', payload);
+                await sleep(3000);
+                await post('/stop_all_stimulus');
+                return;
+            }
+
+            if (direction === 'right') {
+                // 右转 -> /stimulus flow 右flow，执行3次
+                const payload = {
+                    event: 'stimulus',
+                    mode: ['tongue'],
+                    pattern: { type: 'flow', name: 'A-D' }, // 右向：A->D
+                };
+                await post('/stimulus', payload);
+                await sleep(3000);
+                await post('/stop_all_stimulus');
+                return;
+            }
+
+            if (direction === 'straight' || direction === 'arrival') {
+                // 直行/到达 -> start_all 3s 后 stop_all
+                await post('/start_all_stimulus');
+                await sleep(3000);
+                await post('/stop_all_stimulus');
+                return;
             }
         } catch (error) {
-            console.error('🔴 Error sending ESP32 navigation feedback:', error);
+            console.error('🔴 Error sending stimulus feedback:', error);
         }
     };
 
@@ -306,7 +331,9 @@ export function MapScreen() {
                     }
                     console.log('Instruction:', instruction); // 调试日志
                     if (instruction === 'left' || instruction === 'right') {
-                        sendNavigationFeedback(instruction);
+                        sendNavigationFeedback(instruction as 'left' | 'right');
+                    } else if (instruction === 'straight') {
+                        sendNavigationFeedback('straight');
                     }
                     setCurrentInstruction(rawInstruction); // 更新当前步骤指令
                     setCurrentHtmlInstruction(html_instruction); // 更新当前步骤指令（HTML 格式）

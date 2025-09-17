@@ -47,7 +47,7 @@ export const RouteOptionsCard = forwardRef(({
         const destinationStr = `${destination.latitude},${destination.longitude}`;
 
         try {
-            const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${originStr}&destination=${destinationStr}&mode=walking&key=${env.GOOGLE_DIRECTIONS_API_KEY}`;
+            const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${originStr}&destination=${destinationStr}&mode=bicycling&key=${env.GOOGLE_DIRECTIONS_API_KEY}`;
             console.log('Fetching Directions URL:', url);
             const response = await axios.get(url, { timeout: 15000 });
             console.log('Directions API status:', response.data.status, 'routes:', response.data.routes?.length);

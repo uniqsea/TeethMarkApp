@@ -9,6 +9,7 @@ interface Props {
   onRejectWithBusy: () => void;
   esp32Connected?: boolean; // ESP32连接状态
   selectedButton?: number | null; // 当前ESP32选中的按钮 (0:挂断, 1:接听, 2:忙碌)
+  status?: 'idle' | 'sending' | 'sent' | 'failed';
 }
 
 export default function IncomingTwilioCallCard({ 
@@ -17,7 +18,8 @@ export default function IncomingTwilioCallCard({
   onReject, 
   onRejectWithBusy,
   esp32Connected = false,
-  selectedButton = null
+  selectedButton = null,
+  status = 'idle'
 }: Props) {
   if (!visible) return null;
 
@@ -53,17 +55,27 @@ export default function IncomingTwilioCallCard({
           </View>
         </View>
 
-        <View style={styles.actions}>
-          <TouchableOpacity style={getButtonStyle(0)} onPress={onReject}>
-            <FontAwesome5 name="phone-slash" size={20} color="#fff" />
-            <Text style={styles.actionText}>Decline</Text>
-          </TouchableOpacity>
-          {/* 接听按钮已移除 */}
-          <TouchableOpacity style={getButtonStyle(2)} onPress={onRejectWithBusy}>
-            <MaterialIcons name="message" size={20} color="#fff" />
-            <Text style={styles.actionText}>SMS</Text>
-          </TouchableOpacity>
-        </View>
+        {status === 'idle' && (
+          <View style={styles.actions}>
+            <TouchableOpacity style={getButtonStyle(0)} onPress={onReject}>
+              <FontAwesome5 name="phone-slash" size={20} color="#fff" />
+              <Text style={styles.actionText}>Decline</Text>
+            </TouchableOpacity>
+            {/* 接听按钮已移除 */}
+            <TouchableOpacity style={getButtonStyle(2)} onPress={onRejectWithBusy}>
+              <MaterialIcons name="message" size={20} color="#fff" />
+              <Text style={styles.actionText}>SMS</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
+        {status !== 'idle' && (
+          <View style={styles.statusBox}>
+            <Text style={styles.statusText}>
+              {status === 'sending' ? 'Sending SMS…' : status === 'sent' ? 'SMS sent' : 'SMS failed'}
+            </Text>
+          </View>
+        )}
       </View>
     </View>
   );
@@ -147,6 +159,18 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginTop: 2,
     fontWeight: '500',
+  },
+  statusBox: {
+    marginTop: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    borderRadius: 12,
+    backgroundColor: '#0f172a',
+    alignItems: 'center',
+  },
+  statusText: {
+    color: '#e2e8f0',
+    fontWeight: '600',
   },
 });
 
